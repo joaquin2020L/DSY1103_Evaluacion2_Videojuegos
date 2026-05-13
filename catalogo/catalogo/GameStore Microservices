@@ -1,0 +1,26 @@
+# GameStore Microservices - Evaluación Parcial 2
+**Asignatura:** Desarrollo FullStack 1 (DSY1103)  
+**Estudiante:** [Joaquin Fabian Lagos Corrales]  
+**Institución:** Duoc UC
+
+## Descripción del Proyecto
+Este proyecto consiste en el primer avance técnico de una arquitectura basada en microservicios para una tienda de videojuegos. Se implementan 10 microservicios independientes que cubren el catálogo, inventario, usuarios y procesos de venta.
+
+## Microservicios Implementados
+1.  **MS-Catalogo**: Gestión de títulos y precios.
+2.  **MS-Inventario**: Control de stock.
+3.  **MS-Usuarios**: Registro de clientes.
+4.  **MS-Ordenes**: Gestión de compras.
+5.  **MS-Pagos**: Transacciones.
+6.  **MS-Plataformas**: Consolas y categorías.
+7.  **MS-Reseñas**: Comentarios.
+8.  **MS-Promociones**: Cupones.
+9.  **MS-Soporte**: Tickets de ayuda.
+10. **MS-Notificaciones**: Avisos por correo.
+
+## Tecnologías Utilizadas
+* **Java 17+**
+* **Spring Boot 3.x**
+* **JPA / Hibernate** (Persistencia Real)
+* **H2 Database / MySQL**
+* **Patrón CSR** (Controller-Service-Repository)
