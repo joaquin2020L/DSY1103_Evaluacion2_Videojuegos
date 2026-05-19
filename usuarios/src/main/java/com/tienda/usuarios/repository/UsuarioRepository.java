@@ -7,5 +7,5 @@ import com.tienda.usuarios.model.Usuario;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
-    // Aquí heredamos todos los métodos como save(), findAll(), findById(), etc.
+
 }
