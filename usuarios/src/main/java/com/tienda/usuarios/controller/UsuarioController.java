@@ -1,30 +1,37 @@
 package com.tienda.usuarios.controller;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
 import com.tienda.usuarios.model.Usuario;
 import com.tienda.usuarios.service.UsuarioService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
 
 @RestController
 @RequestMapping("/usuarios")
 public class UsuarioController {
-    @Autowired
-    private UsuarioService service;
 
-    @GetMapping
-    public List<Usuario> listar() {
-        return service.listarTodos();
+    @Autowired
+    private UsuarioService usuarioService;
+
+    @GetMapping("/lista")
+    public List<Usuario> obtenerUsuarios() {
+        return usuarioService.listarTodos();
     }
 
-    @PostMapping
-    public Usuario crear(@RequestBody Usuario usuario) {
-        return service.guardar(usuario);
+    @GetMapping("/{id}")
+    public ResponseEntity<Usuario> obtenerPorId(@PathVariable Long id) {
+        return usuarioService.obtenerPorId(id)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<String> login(@RequestParam String email, @RequestParam String password) {
+        String token = usuarioService.login(email, password);
+        if (token.contains("TOKEN")) {
+            return ResponseEntity.ok("{\"token\": \"" + token + "\", \"status\": \"Autenticado\"}");
+        }
+        return ResponseEntity.status(401).body(token);
     }
 }
