@@ -6,6 +6,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @EnableDiscoveryClient
 @SpringBootApplication
+@EnableFeignClients
 public class MsEnviosApplication {
 
 	public static void main(String[] args) {
