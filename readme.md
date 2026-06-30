@@ -1,8 +1,6 @@
-# Proyecto Microservicios - DSY1103
+## 📦 COMPONENTES DE ENTREGA FINAL (EP3) - ARCHIVOS ADJUNTOS
 
-Este proyecto consiste en una arquitectura de microservicios completamente desacoplados utilizando Spring Boot, Eureka Server y API Gateway.
-
-## Video Explicativo del Proyecto
-Puedes ver la demostración del funcionamiento directamente en el repositorio haciendo clic en el siguiente enlace:
-
-[VER VIDEO DEL PROYECTO AQUÍ](./video-explicativo.mp4)
+| Componente | Descripción | Enlace de Acceso Directo |
+| :--- | :--- | :--- |
+| **📦 Proyecto Completo (.ZIP)** | Código fuente unificado con script .bat | [Acceder a la Carpeta de Entrega](https://drive.google.com/drive/folders/1hW5s6mlnAwwLOEyOPFrdlsjkNeP-Xgsg?usp=drive_link) |
+| **🎥 Video de Defensa Técnica** | Explicación de Arquitectura, YAML, Swagger y Feign | [Acceder a la Carpeta de Entrega](https://drive.google.com/drive/folders/1hW5s6mlnAwwLOEyOPFrdlsjkNeP-Xgsg?usp=drive_link) |
