@@ -5,27 +5,42 @@ echo   INICIANDO ARQUITECTURA DE MICROSERVICIOS (FASE 1)
 echo =======================================================
 
 echo [1/3] Levantando Servidor de Descubrimiento (Eureka)...
-start "EUREKA SERVER" cmd /k "cd eureka-server && mvnw spring-boot:run"
+start "EUREKA SERVER" cmd /k "cd eureka-server && ./mvnw spring-boot:run"
 timeout /t 15
 
 echo =======================================================
 echo   INICIANDO INFRAESTRUCTURA BASE (FASE 2)
 echo =======================================================
 echo [2/3] Levantando API Gateway...
-start "API GATEWAY" cmd /k "cd api-gateway && mvnw spring-boot:run"
+start "API GATEWAY" cmd /k "cd api-gateway && ./mvnw spring-boot:run"
 timeout /t 10
 
 echo =======================================================
 echo   INICIANDO SERVICIOS DE NEGOCIO (FASE 3)
 echo =======================================================
 echo [3/3] Levantando Microservicio de Usuarios y Roles...
-start "MS-USUARIOS" cmd /k "cd usuarios && mvnw spring-boot:run"
+start "MS-USUARIOS" cmd /k "cd usuarios && ./mvnw spring-boot:run"
 
 echo [3/3] Levantando Microservicio de Envios...
-start "MS-ENVIOS" cmd /k "cd ms-envios && mvnw spring-boot:run"
+start "MS-ENVIOS" cmd /k "cd ms-envios && ./mvnw spring-boot:run"
 
 echo [3/3] Levantando Microservicio de Pagos...
-start "MS-PAGOS" cmd /k "cd ms-pagos && mvnw spring-boot:run"
+start "MS-PAGOS" cmd /k "cd ms-pagos && ./mvnw spring-boot:run"
+
+echo [3/3] Levantando Microservicio de Inventario...
+start "MS-INVENTARIO" cmd /k "cd inventario && ./mvnw spring-boot:run"
+
+echo [3/3] Levantando Microservicio de Catalogo...
+start "MS-CATALOGO" cmd /k "cd catalogo && ./mvnw spring-boot:run"
+
+echo [3/3] Levantando Microservicio de Resenas...
+start "MS-RESENAS" cmd /k "cd ms-resenas && ./mvnw spring-boot:run"
+
+echo [3/3] Levantando Microservicio de Soporte...
+start "MS-SOPORTE" cmd /k "cd ms-soporte && ./mvnw spring-boot:run"
+
+echo [3/3] Levantando Microservicio de Ordenes...
+start "MS-ORDENES" cmd /k "cd ordenes && ./mvnw spring-boot:run"
 
 echo =======================================================
 echo !SISTEMA INICIADO EXITOSAMENTE! Manten las ventanas abiertas.
